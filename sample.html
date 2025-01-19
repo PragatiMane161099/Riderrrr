@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sewa Parcel Delivery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #242424;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            max-width: 95%;
+            width: 1200px;
+            margin: 20px auto;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .big {
+            height: 250px;
+            background-color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            color: #555;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .big img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Prevent image cropping, fits image inside box */
+            border-radius: 8px;
+        }
+
+        .small {
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            font-size: 1.2rem;
+            color: #777;
+            margin-bottom: 15px;
+            height: auto; /* Auto height for flexible content */
+            border-radius: 8px;
+            padding: 15px;
+        }
+
+        .small:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Middle Column adjustments */
+        .middle-column .small {
+            font-size: 1.3rem;
+            color: #555;
+        }
+
+        /* Ensuring mobile responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr; /* Stack all columns vertically on mobile */
+                width: 100%;
+                margin: 10px auto;
+            }
+
+            header {
+                font-size: 1.5rem; /* Reduce header font size on mobile */
+                padding: 10px 0;
+            }
+
+            .column {
+                margin-bottom: 20px; /* Add some spacing between stacked columns */
+            }
+
+            .big {
+                height: 200px; /* Adjust image box size on smaller screens */
+            }
+
+            .small {
+                font-size: 1.1rem;
+                padding: 10px;
+            }
+        }
+
+        /* Larger screens */
+        @media (min-width: 1200px) {
+            .container {
+                grid-template-columns: 1fr 1fr 1fr; /* 3 columns for large screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        SEWA PARCEL DELIVERY
+    </header>
+
+    <!-- 3-Column Layout -->
+    <div class="container">
+        <!-- First Column -->
+        <div class="column">
+            <div class="big">
+                <img src="image1.jpeg" alt="Image 1">
+            </div>
+            <div class="small">
+                <strong>Same Day Pick up!</strong><br>
+                Same Day Delivery!
+            </div>
+            <div class="small">
+                <strong>Service Rate:</strong><br>
+                1KM: 10 Rs<br>
+                2KM onwards: 7 Rs per KM
+            </div>
+        </div>
+
+        <!-- Middle Column -->
+        <div class="column middle-column">
+            <div class="big">
+                <img src="image3.png" alt="Image 3">
+            </div>
+            <div class="small">
+                <strong>Delivery Locations:</strong><br>
+                District: Sangli<br>
+                Taluka: Walwa (All villages)
+            </div>
+            <div class="small">
+                <strong>Delivery Items:</strong><br>
+                Stationary, Grocery, Gifts<br>
+                Medicines, Water/Flowers<br>
+                Food/Tiffin, Documents/Books
+            </div>
+        </div>
+
+        <!-- Last Column -->
+        <div class="column">
+            <div class="big">
+                <img src="image2.jpeg" alt="Image 2">
+            </div>
+            <div class="small">
+                <strong>Please Contact:</strong><br>
+                8149479747
+            </div>
+            <div class="small">
+                <strong>Provide details:</strong><br>
+                1. Pick-up address<br>
+                2. Delivery address<br>
+                3. Contact number<br>
+                4. Delivery Item details
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
